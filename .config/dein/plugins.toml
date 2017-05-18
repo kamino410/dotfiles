@@ -1,0 +1,23 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+on_ft = ['cpp', 'h']
+hook_add = '''
+    let g:clang_format#style_options = {
+        \ "AccessModifierOffset" : -4,
+        \ "IndentWidth" : 4,
+        \ "TabWidth" : 4,
+        \ "Standard" : "C++11"}
+    map <C-k><C-d> :ClangFormat<cr>
+'''
+
+[[plugins]]
+repo = 'justmao945/vim-clang'
+on_ft = ['cpp', 'h']
+hook_add = '''
+    let g:clang_cpp_options = '-std=c++14 -stdlib=libc++'
+    map <C-c><C-c> :ClangSyntaxCheck<cr>
+'''
+
