@@ -35,3 +35,6 @@ hook_add = '''
     colorscheme molokai
 '''
 
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
