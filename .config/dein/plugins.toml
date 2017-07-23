@@ -31,10 +31,18 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tomasr/molokai'
-hook_add = '''
-    colorscheme molokai
-'''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_add = '''
+    let g:rustfmt_autosave = 1
+    let g:rustfmt_command = "/Users/kamino/.cargo/bin/rustfmt"
+'''
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
 

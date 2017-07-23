@@ -1,3 +1,4 @@
+" dein --------------------
 let g:cache_home = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
 let g:config_home = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME
 let s:dein_cache_dir = g:cache_home . '/dein'
@@ -28,6 +29,8 @@ if dein#check_install()
 endif
 
 "----------------------------------------
+colorscheme molokai
+
 set number
 
 set tabstop=4
@@ -44,8 +47,19 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.cpp setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
+" mute --------------------
 set visualbell
 set t_vb=
 
-"----------------------------------------
+" syntastic ---------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+filetype plugin indent on
 
