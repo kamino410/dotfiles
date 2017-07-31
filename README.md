@@ -3,7 +3,14 @@
 under construction ...
 
 * NeoVim
-  * dein.vim
+  * Shougo/dein.vim
+  * rhysd/vim-clang-format
+  * justmao945/vim-clang
+  * scrooloose/nerdtree
+  * tomasr/molokai
+  * vim-airline/vim-airline
+  * rhysd/accelerated-jk
+  * rust-lang/rust.vim
 * zsh
 
 # vim shortcuts
@@ -20,7 +27,7 @@ i : insert, n : normal, \+ : second command
 
 |char|ctrl-lower|
 |----|----|
-|`e`|n : `NERDTreeToggle`|
+|`e`|n : Treeへカーソル移動/Treeを閉じる|
 |`w`|+`h,j,k,l` n : panel移動<br>+`c` n : 現在のpanelを削除<br>+`o` n : 現在のpanel以外を削除<br>+`x` n : 現在のpanelと次のpanelを入れ替える<br>+`+` n : 現在のpanelを1文字分高くする<br>+`-` n : 現在のpanelを1文字分低くする<br>+`>` n : 現在のpanelを1文字分広くする<br>+`<` n : 現在のpanelを1文字分狭くする|
 
 ## on tree view
@@ -36,8 +43,9 @@ i : insert, n : normal, \+ : second command
 |`t`|新規タブで開く|新規タブで開き移動はしない|
 |`g`|+`o,i,s` プレビュー（カーソルはtreeのまま）||
 |`e`|新規treeを開く||
-|`c`||ルートを選択したディレクトリに|
+|`c`||選択したディレクトリをルートに|
 |`u`|ルートを1つ上の階層に|折りたたまずにルートを1つ上の階層に|
+
 |`m`|メニューを開く（touch/mkdir/rmなどができる）||
 |`i`||隠しファイルの表示・非表示|
 |`f`||ファイルの表示・非表示|

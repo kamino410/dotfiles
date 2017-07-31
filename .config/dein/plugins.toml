@@ -26,7 +26,14 @@ hook_add = '''
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-    nnoremap <silent><C-e> :NERDTreeToggle<CR>
+    function! NERDTreeToggleEnhanced()
+        if g:NERDTree.IsOpen() && winnr() != g:NERDTree.GetWinNum()
+            call g:NERDTree.CursorToTreeWin()
+        else
+            :NERDTreeToggle
+        endif
+    endfunction
+    nnoremap <silent><C-e> :call NERDTreeToggleEnhanced()<CR>
 '''
 
 [[plugins]]
