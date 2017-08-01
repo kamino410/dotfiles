@@ -57,6 +57,8 @@ set t_vb=
 " keymap ------------------
 " to avoid confriction between vim's 'paste mode' and iterm's 'paste'
 noremap <C-v> <Nop>
+nnoremap ; :
+nnoremap : ;
 
 " syntastic ---------------
 set statusline+=%#warningmsg#
