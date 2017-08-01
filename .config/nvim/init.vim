@@ -28,7 +28,7 @@ if dein#check_install()
     call dein#install()
 endif
 
-"----------------------------------------
+"--------------------------
 colorscheme molokai
 
 set number
@@ -47,9 +47,16 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.cpp setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
+" clipboard ---------------
+set clipboard+=unnamedplus
+
 " mute --------------------
 set visualbell
 set t_vb=
+
+" keymap ------------------
+" to avoid confriction between vim's 'paste mode' and iterm's 'paste'
+noremap <C-v> <Nop>
 
 " syntastic ---------------
 set statusline+=%#warningmsg#
@@ -61,5 +68,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" filetype ----------------
 filetype plugin indent on
 
