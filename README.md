@@ -28,13 +28,13 @@ i : insert, n : normal, \+ : second command
 |char|ctrl-lower|
 |----|----|
 |`e`|n : Treeへカーソル移動/Treeを閉じる|
-|`w`|+`h,j,k,l` n : panel移動<br>+`c` n : 現在のpanelを削除<br>+`o` n : 現在のpanel以外を削除<br>+`x` n : 現在のpanelと次のpanelを入れ替える<br>+`+` n : 現在のpanelを1文字分高くする<br>+`-` n : 現在のpanelを1文字分低くする<br>+`>` n : 現在のpanelを1文字分広くする<br>+`<` n : 現在のpanelを1文字分狭くする|
+|`w`|+`h,j,k,l` n : panel移動<br />+`c` n : 現在のpanelを削除<br />+`o` n : 現在のpanel以外を削除<br />+`x` n : 現在のpanelと次のpanelを入れ替える<br />+`+` n : 現在のpanelを1文字分高くする<br />+`-` n : 現在のpanelを1文字分低くする<br />+`>` n : 現在のpanelを1文字分広くする<br />+`<` n : 現在のpanelを1文字分狭くする|
 
 ## on tree view
 
 |char|lower|upper|
 |----|----|----|
-|`Enter`<br>`o`|ファイルを開く<br>ディレクトリを開閉|ディレクトリを再帰的に開く|
+|`Enter`<br />`o`|ファイルを開く<br />ディレクトリを開閉|ディレクトリを再帰的に開く|
 |`p`|親ディレクトリへ移動|ルートディレクトリへ移動|
 |`k`,`j`|上下移動|ディレクトリ内の一番上・一番下へ移動|
 |`x`|親ディレクトリを閉じる|ディレクトリを再帰的に閉じる|
