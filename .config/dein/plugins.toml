@@ -54,7 +54,7 @@ repo = 'rust-lang/rust.vim'
 on_ft = 'rust'
 hook_add = '''
     let g:rustfmt_autosave = 1
-    let g:rustfmt_command = "/Users/kamino/.cargo/bin/rustfmt"
+    let g:rustfmt_command = "$HOME/.cargo/bin/rustfmt --config-path $HOME/.config/rust/rustfmt.toml"
 '''
 
 [[plugins]]
