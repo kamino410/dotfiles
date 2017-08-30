@@ -42,11 +42,6 @@ set smartindent
 set list
 set listchars=tab:»-,trail:-
 
-augroup fileTypeIndent
-    autocmd!
-    autocmd BufNewFile,BufRead *.cpp setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
-
 " clipboard ---------------
 set clipboard+=unnamedplus
 
