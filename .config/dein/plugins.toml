@@ -2,6 +2,10 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_ft = 'rust'
+
+[[plugins]]
 repo = 'rhysd/vim-clang-format'
 on_ft = ['cpp', 'h']
 hook_add = '''
@@ -25,6 +29,7 @@ hook_add = '''
     let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
     let g:clang_check_syntax_auto = 1
     map <C-c><C-c> :ClangSyntaxCheck<cr>
+    let b:deoplete_disable_auto_complete=1
 '''
 
 [[plugins]]
@@ -62,5 +67,11 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'vim-syntastic/syntastic'
+repo = 'sebastianmarkow/deoplete-rust'
+on_ft = 'rust'
+hook_add = '''
+    let g:deoplete#sources#rust#racer_binary='/Users/kamino/.cargo/bin/racer'
+    let g:deoplete#sources#rust#rust_source_path='/Users/kamino/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
+    let g:deoplete#enable_at_startup=1
+'''
 
