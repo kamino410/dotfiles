@@ -1,0 +1,16 @@
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+hook_add = '''
+    let g:rustfmt_autosave = 1
+    let g:rustfmt_command = "$HOME/.cargo/bin/rustfmt --config-path $HOME/.config/rust/rustfmt.toml"
+'''
+
+[[plugins]]
+repo = 'sebastianmarkow/deoplete-rust'
+hook_add = '''
+    let g:deoplete#sources#rust#racer_binary='/Users/kamino/.cargo/bin/racer'
+    let g:deoplete#sources#rust#rust_source_path='/Users/kamino/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
+    let g:deoplete#enable_at_startup=1
+    let b:deoplete_disable_auto_complete=0
+'''
+

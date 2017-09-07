@@ -3,34 +3,6 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-on_ft = 'rust'
-
-[[plugins]]
-repo = 'rhysd/vim-clang-format'
-on_ft = ['cpp', 'h']
-hook_add = '''
-    let g:clang_format#style_options = {
-        \ "AccessModifierOffset" : -4,
-        \ "IndentWidth" : 4,
-        \ "TabWidth" : 4,
-        \ "UseTab" : "Never",
-        \ "Standard" : "C++11",
-        \ "AllowShortBlocksOnASingleLine" : "true",
-        \ "AllowShortIfStatementsOnASingleLine" : "true",
-        \ "AllowShortCaseLabelsOnASingleLine" : "true"}
-    let g:clang_format#auto_format = 1
-    map <C-k><C-d> :ClangFormat<cr>
-'''
-
-[[plugins]]
-repo = 'justmao945/vim-clang'
-on_ft = ['cpp', 'h']
-hook_add = '''
-    let g:clang_cpp_options = '-std=c++11 -stdlib=libc++'
-    let g:clang_check_syntax_auto = 1
-    map <C-c><C-c> :ClangSyntaxCheck<cr>
-    let b:deoplete_disable_auto_complete=1
-'''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -56,22 +28,5 @@ repo = 'rhysd/accelerated-jk'
 hook_add = '''
     nmap j <Plug>(accelerated_jk_gj)
     nmap k <Plug>(accelerated_jk_gk)
-'''
-
-[[plugins]]
-repo = 'rust-lang/rust.vim'
-on_ft = 'rust'
-hook_add = '''
-    let g:rustfmt_autosave = 1
-    let g:rustfmt_command = "$HOME/.cargo/bin/rustfmt --config-path $HOME/.config/rust/rustfmt.toml"
-'''
-
-[[plugins]]
-repo = 'sebastianmarkow/deoplete-rust'
-on_ft = 'rust'
-hook_add = '''
-    let g:deoplete#sources#rust#racer_binary='/Users/kamino/.cargo/bin/racer'
-    let g:deoplete#sources#rust#rust_source_path='/Users/kamino/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
-    let g:deoplete#enable_at_startup=1
 '''
 
