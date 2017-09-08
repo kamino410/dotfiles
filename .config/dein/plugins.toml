@@ -5,6 +5,30 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/deoplete.nvim'
 
 [[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/vimshell.vim'
+
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = '''
+    let g:quickrun_config={}
+    let g:quickrun_config["cpp"] = {
+        \ "type" : "cpp",
+        \ "command" : "clang++",
+        \ "cmdopt" : " -std=c++14",
+        \ "runner" : "vimproc",
+        \ "runner/vimproc/updatetime" : 100}
+    let g:quickrun_config["_"] = {
+        \ "outputter/buffer/split" : ":rightbelow 8sp"}
+'''
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
     function! NERDTreeToggleEnhanced()
