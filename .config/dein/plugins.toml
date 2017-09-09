@@ -13,6 +13,9 @@ repo = 'Shougo/vimshell.vim'
 
 [[plugins]]
 repo = 'vim-syntastic/syntastic'
+hook_add = '''
+    let g:syntastic_cpp_compiler_options = '-std=c++14'
+'''
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
