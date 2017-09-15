@@ -45,6 +45,12 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'myusuf3/numbers.vim'
+hook_add = '''
+    let g:numbers_exclude = ['vimshell', 'nerdtree']
+'''
+
+[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]
