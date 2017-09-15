@@ -19,6 +19,8 @@ if dein#load_state(s:dein_cache_dir)
     call dein#begin(s:dein_cache_dir)
     let s:toml_dir = g:config_home . '/dein'
     call dein#load_toml(s:toml_dir . '/plugins.toml' , {'lazy': 0})
+    call dein#load_toml(s:toml_dir . '/cpp.toml' , {'lazy': 0, 'on_ft': ['c', 'cpp', 'h', 'hpp']})
+    call dein#load_toml(s:toml_dir . '/rust.toml' , {'lazy': 0, 'on_ft': 'rust'})
     call dein#load_toml(s:toml_dir . '/lazy_plugins.toml' , {'lazy': 1})
     call dein#end()
     call dein#save_state()
