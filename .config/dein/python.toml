@@ -1,0 +1,6 @@
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+hook_add = '''
+    let g:jedi#force_py_version = 3
+'''
+
