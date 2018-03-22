@@ -7,6 +7,7 @@ hook_add = '''
         \ "TabWidth" : 4,
         \ "UseTab" : "Never",
         \ "Standard" : "C++11",
+        \ "ColumnLimit" : 100,
         \ "AllowShortBlocksOnASingleLine" : "true",
         \ "AllowShortIfStatementsOnASingleLine" : "true",
         \ "AllowShortCaseLabelsOnASingleLine" : "true"}
