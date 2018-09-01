@@ -49,3 +49,6 @@ i : insert, n : normal, \+ : second command
 |`m`|メニューを開く（touch/mkdir/rmなどができる）||
 |`i`||隠しファイルの表示・非表示|
 |`f`||ファイルの表示・非表示|
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbODc0MTYzNzY1XX0=
+-->
