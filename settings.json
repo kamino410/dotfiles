@@ -1,0 +1,98 @@
+{
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "all",
+    "editor.formatOnSave": true,
+    "csharp.referencesCodeLens.enabled": false,
+    "workbench.sideBar.location": "right",
+    "vim.foldfix": true,
+    "editor.lineNumbers": "relative",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "after": [
+                ";"
+            ]
+        }
+    ],
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Google }",
+    // tex
+    "latex-workshop.latex.tools": [
+        {
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ],
+            "name": "Step 1: ptex2pdf"
+        },
+        {
+            "command": "pbibtex",
+            "args": [
+                "%DOCFILE%",
+                "-kanji=utf8"
+            ],
+            "name": "Step 2: pbibtex"
+        },
+        {
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ],
+            "name": "Step 3: ptex2pdf"
+        },
+        {
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ],
+            "name": "Step 4: ptex2pdf"
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "toolchain",
+            "tools": [
+                "Step 1: ptex2pdf",
+                "Step 2: pbibtex",
+                "Step 3: ptex2pdf",
+                "Step 4: ptex2pdf"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.renderControlCharacters": true,
+    "vim.enableNeovim": true,
+    "[cpp]": {
+        "editor.tabSize": 2
+    },
+    "[c]": {
+        "editor.tabSize": 2
+    },
+    "C_Cpp.default.includePath": [
+        "/usr/local/Cellar/opencv/3.3.0_3/include",
+        "/usr/local/include/eigen3"
+    ],
+    "C_Cpp.clang_format_sortIncludes": false,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "extensions.ignoreRecommendations": false,
+    "cmake.configureOnOpen": true,
+}
