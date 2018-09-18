@@ -28,7 +28,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_if",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 },
@@ -56,7 +60,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_if",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 },
@@ -79,7 +87,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_if",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 },
@@ -102,7 +114,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_if",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 },
@@ -130,7 +146,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_unless",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 },
@@ -158,7 +178,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_unless",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 },
@@ -181,7 +205,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_unless",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 },
@@ -204,7 +232,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_unless",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 }
@@ -229,7 +261,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_if",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 }
@@ -262,7 +298,11 @@
                     "conditions": [
                         {
                             "type": "frontmost_application_if",
-                            "bundle_identifiers": [ "^com.googlecode.iterm2" ]
+                            "bundle_identifiers": [
+                                "^com.googlecode.iterm2",
+                                "^com.microsoft.VSCode",
+                                "^io.alacritty"
+                            ]
                         }
                     ]
                 }
