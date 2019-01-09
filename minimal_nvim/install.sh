@@ -3,9 +3,9 @@ apt update
 apt install -y software-properties-common
 add-apt-repository -y ppa:neovim-ppa/unstable
 apt update
-apt install -y neovim python3-pip git clang clang-tools
+apt install -y neovim python3-pip git clang clang-tools curl clang-format
 
-python3 -m pip install pynvim neovim curl
+python3 -m pip install pynvim neovim
 
 mkdir ~/.config
 mkdir ~/.config/dein

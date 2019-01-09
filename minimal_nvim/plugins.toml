@@ -38,8 +38,31 @@ rev = 'next'
 build = 'bash install.sh'
 hook_add = '''
     set hidden
+    set signcolumn=yes
     let g:LanguageClient_autoStart = 1
     let g:LanguageClient_serverCommands = {
-    \   'cpp': ['/usr/bin/clangd-6.0'],
+        \ 'c': ['clangd-6.0', '-compile-commands-dir=' . getcwd() . '/build'],
+        \ 'cpp': ['clangd-6.0', '-compile-commands-dir=' . getcwd() . '/build'],
     \ }
+
+    nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+    nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+    nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+    nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+'''
+
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+hook_add = '''
+    let g:clang_format#style_options = {
+        \ "AccessModifierOffset" : -4,
+        \ "IndentWidth" : 4,
+        \ "TabWidth" : 4,
+        \ "UseTab" : "Never",
+        \ "Standard" : "C++11",
+        \ "ColumnLimit" : 100,
+        \ "AllowShortBlocksOnASingleLine" : "true",
+        \ "AllowShortIfStatementsOnASingleLine" : "true",
+        \ "AllowShortCaseLabelsOnASingleLine" : "true"}
+    let g:clang_format#auto_format = 1
 '''
