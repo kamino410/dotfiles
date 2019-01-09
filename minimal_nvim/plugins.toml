@@ -1,0 +1,45 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = """
+    let g:deoplete#enable_at_startup = 1
+"""
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    function! NERDTreeToggleEnhanced()
+        if g:NERDTree.IsOpen() && winnr() != g:NERDTree.GetWinNum()
+            call g:NERDTree.CursorToTreeWin()
+        else
+            :NERDTreeToggle
+        endif
+    endfunction
+    nnoremap <silent><C-e> :call NERDTreeToggleEnhanced()<CR>
+'''
+
+[[plugins]]
+repo = 'myusuf3/numbers.vim'
+hook_add = '''
+    let g:numbers_exclude = ['nerdtree']
+'''
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+    set hidden
+    let g:LanguageClient_autoStart = 1
+    let g:LanguageClient_serverCommands = {
+    \   'cpp': ['/usr/bin/clangd-6.0'],
+    \ }
+'''
