@@ -16,3 +16,4 @@ cd ~/github
 git clone https://github.com/kamino410/dotfiles.git
 cp ./dotfiles/minimal_nvim/init.vim ~/.config/nvim
 cp ./dotfiles/minimal_nvim/plugins.toml ~/.config/dein
+cd ~
