@@ -1,3 +1,5 @@
+let g:python3_host_prog = 'python3'
+
 " dein --------------------
 let g:cache_home = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
 let g:config_home = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME
@@ -53,9 +55,12 @@ set t_vb=
 
 " keymap ------------------
 " to avoid confriction between vim's 'paste mode' and iterm's 'paste'
-noremap <C-v> <Nop>
 nnoremap ; :
-nnoremap : ;
+nnoremap : .
+nnoremap . :
+nnoremap <C-h> gT  "hと同じ
+nnoremap <C-l> gt  "Redraw screen
+tnoremap <C-[> <C-\><C-n>
 
 " syntastic ---------------
 set statusline+=%#warningmsg#
