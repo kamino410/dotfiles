@@ -10,14 +10,14 @@ hook_add = """
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-    function! NERDTreeToggleEnhanced()
-        if g:NERDTree.IsOpen() && winnr() != g:NERDTree.GetWinNum()
-            call g:NERDTree.CursorToTreeWin()
-        else
-            :NERDTreeToggle
-        endif
-    endfunction
-    nnoremap <silent><C-e> :call NERDTreeToggleEnhanced()<CR>
+    let g:NERDTreeQuitOnOpen=1
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+'''
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+hook_add = '''
+    nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 '''
 
 [[plugins]]
