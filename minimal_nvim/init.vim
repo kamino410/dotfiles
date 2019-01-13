@@ -51,10 +51,14 @@ set visualbell
 set t_vb=
 
 " keymap ------------------
-" to avoid confriction between vim's 'paste mode' and iterm's 'paste'
-noremap <C-v> <Nop>
 nnoremap ; :
-nnoremap : ;
+nnoremap : .
+nnoremap . ;
+nnoremap <C-h> gT
+nnoremap <C-l> gt
 
+tnoremap <C-[> <C-\><C-n>
+
+" syntax ------------------
 filetype plugin indent on
 syntax on
