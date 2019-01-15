@@ -56,9 +56,12 @@ nnoremap : .
 nnoremap . ;
 nnoremap <C-h> gT
 nnoremap <C-l> gt
+noremap <Space>h ^
+noremap <Space>l $
 
 tnoremap <C-[> <C-\><C-n>
 
 " syntax ------------------
 filetype plugin indent on
 syntax on
+
