@@ -51,13 +51,14 @@ set visualbell
 set t_vb=
 
 " keymap ------------------
-nnoremap ; :
-nnoremap : .
-nnoremap . ;
+noremap ; :
+noremap : .
+noremap . ;
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 noremap <Space>h ^
 noremap <Space>l $
+noremap <Space>t :tabnew<CR>:te<CR>
 
 tnoremap <C-[> <C-\><C-n>
 
