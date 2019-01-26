@@ -57,9 +57,10 @@ repo = 'rhysd/vim-clang-format'
 on_ft = ['c', 'cpp', 'h', 'hpp']
 hook_add = '''
     let g:clang_format#style_options = {
-        \ "AccessModifierOffset" : -4,
-        \ "IndentWidth" : 4,
-        \ "TabWidth" : 4,
+        \ "BasedOnStyle" : "Google",
+        \ "AccessModifierOffset" : -2,
+        \ "IndentWidth" : 2,
+        \ "TabWidth" : 2,
         \ "UseTab" : "Never",
         \ "Standard" : "C++11",
         \ "ColumnLimit" : 100,
