@@ -31,6 +31,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -63,6 +64,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -90,6 +92,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -117,6 +120,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -149,6 +153,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -181,6 +186,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -208,6 +214,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -235,6 +242,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -264,6 +272,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
@@ -301,6 +310,7 @@
                             "bundle_identifiers": [
                                 "^com.googlecode.iterm2",
                                 "^com.microsoft.VSCode",
+                                "^com.microsoft.rdc.macos",
                                 "^io.alacritty"
                             ]
                         }
