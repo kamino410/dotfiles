@@ -66,3 +66,7 @@ tnoremap <C-[> <C-\><C-n>
 filetype plugin indent on
 syntax on
 
+" neovim remote -----------
+let $GIT_EDITOR = 'nvr -cc split --remote-wait'
+autocmd FileType gitcommit set bufhidden=delete
+
