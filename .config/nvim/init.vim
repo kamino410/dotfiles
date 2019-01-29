@@ -21,9 +21,6 @@ if dein#load_state(s:dein_cache_dir)
     call dein#begin(s:dein_cache_dir)
     let s:toml_dir = g:config_home . '/dein'
     call dein#load_toml(s:toml_dir . '/plugins.toml' , {'lazy': 0})
-    call dein#load_toml(s:toml_dir . '/cpp.toml' , {'lazy': 0, 'on_ft': ['c', 'cpp', 'h', 'hpp']})
-    call dein#load_toml(s:toml_dir . '/rust.toml' , {'lazy': 0, 'on_ft': 'rust'})
-    call dein#load_toml(s:toml_dir . '/lazy_plugins.toml' , {'lazy': 1})
     call dein#end()
     call dein#save_state()
 endif
@@ -54,24 +51,22 @@ set visualbell
 set t_vb=
 
 " keymap ------------------
-" to avoid confriction between vim's 'paste mode' and iterm's 'paste'
-nnoremap ; :
-nnoremap : .
-nnoremap . :
-nnoremap <C-h> gT  "hと同じ
-nnoremap <C-l> gt  "Redraw screen
+noremap ; :
+noremap : .
+noremap . ;
+nnoremap <C-h> gT
+nnoremap <C-l> gt
+noremap <Space>h ^
+noremap <Space>l $
+noremap <Space>t :tabnew<CR>:te<CR>
+
 tnoremap <C-[> <C-\><C-n>
 
-" syntastic ---------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" filetype ----------------
+" syntax ------------------
 filetype plugin indent on
+syntax on
+
+" neovim remote -----------
+let $GIT_EDITOR = 'nvr -cc split --remote-wait'
+autocmd FileType gitcommit set bufhidden=delete
 

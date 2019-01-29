@@ -3,51 +3,27 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
-[[plugins]]
-repo = 'Shougo/vimshell.vim'
-
-[[plugins]]
-repo = 'vim-syntastic/syntastic'
-hook_add = '''
-    let g:syntastic_cpp_compiler_options = '-std=c++14'
-'''
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-hook_add = '''
-    let g:quickrun_config={}
-    let g:quickrun_config["cpp"] = {
-        \ "type" : "cpp",
-        \ "command" : "clang++",
-        \ "cmdopt" : " -std=c++14",
-        \ "runner" : "vimproc",
-        \ "runner/vimproc/updatetime" : 100}
-    let g:quickrun_config["_"] = {
-        \ "outputter/buffer/split" : ":rightbelow 8sp"}
-'''
+hook_add = """
+    let g:deoplete#enable_at_startup = 1
+"""
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-    function! NERDTreeToggleEnhanced()
-        if g:NERDTree.IsOpen() && winnr() != g:NERDTree.GetWinNum()
-            call g:NERDTree.CursorToTreeWin()
-        else
-            :NERDTreeToggle
-        endif
-    endfunction
-    nnoremap <silent><C-e> :call NERDTreeToggleEnhanced()<CR>
+    let g:NERDTreeQuitOnOpen=1
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+'''
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+hook_add = '''
+    nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 '''
 
 [[plugins]]
 repo = 'myusuf3/numbers.vim'
 hook_add = '''
-    let g:numbers_exclude = ['vimshell', 'nerdtree']
+    let g:numbers_exclude = ['nerdtree']
 '''
 
 [[plugins]]
@@ -57,9 +33,49 @@ repo = 'tomasr/molokai'
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
-repo = 'rhysd/accelerated-jk'
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
 hook_add = '''
-    nmap j <Plug>(accelerated_jk_gj)
-    nmap k <Plug>(accelerated_jk_gk)
+    set hidden
+    set signcolumn=yes
+    let g:LanguageClient_autoStart = 1
+    let g:LanguageClient_serverCommands = {
+        \ 'c': ['clangd-6.0', '-compile-commands-dir=' . getcwd() . '/build'],
+        \ 'cpp': ['clangd-6.0', '-compile-commands-dir=' . getcwd() . '/build'],
+        \ 'python': ['pyls'],
+    \ }
+
+    nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+    nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+    nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+    nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+'''
+
+[[plugins]]
+repo = 'rhysd/vim-clang-format'
+on_ft = ['c', 'cpp']
+hook_add = '''
+    let g:clang_format#style_options = {
+        \ "BasedOnStyle" : "Google",
+        \ "AccessModifierOffset" : -2,
+        \ "IndentWidth" : 2,
+        \ "TabWidth" : 2,
+        \ "UseTab" : "Never",
+        \ "Standard" : "C++11",
+        \ "ColumnLimit" : 100,
+        \ "AllowShortBlocksOnASingleLine" : "true",
+        \ "AllowShortIfStatementsOnASingleLine" : "true",
+        \ "AllowShortCaseLabelsOnASingleLine" : "true"}
+    let g:clang_format#auto_format = 1
+    autocmd FileType c setlocal sw=2 sts=2 ts=2 et
+'''
+
+[[plugins]]
+repo = 'tell-k/vim-autopep8'
+on_ft = ['python']
+hook_add = '''
+    let g:autopep8_on_save = 1
+    let g:autopep8_disable_show_diff=1
 '''
 
