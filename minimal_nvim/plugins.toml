@@ -54,7 +54,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'rhysd/vim-clang-format'
-on_ft = ['c', 'cpp', 'h', 'hpp']
+on_ft = ['c', 'cpp']
 hook_add = '''
     let g:clang_format#style_options = {
         \ "BasedOnStyle" : "Google",
