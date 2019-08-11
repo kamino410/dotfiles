@@ -3,14 +3,20 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+depends = 'context_filetype.vim'
+on_event = "InsertEnter"
 hook_add = """
     let g:deoplete#enable_at_startup = 1
 """
 
 [[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-    let g:NERDTreeQuitOnOpen=1
+    " let g:NERDTreeQuitOnOpen=1
+    let NERDTreeShowHidden=1
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 '''
 
@@ -18,6 +24,7 @@ hook_add = '''
 repo = 'jistr/vim-nerdtree-tabs'
 hook_add = '''
     nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
+    let g:nerdtree_tabs_meaningful_tab_names = 1
 '''
 
 [[plugins]]
@@ -55,7 +62,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'rhysd/vim-clang-format'
-on_ft = ['c', 'cpp', 'h', 'hpp']
+on_ft = ['c', 'cpp', 'cuda']
 hook_add = '''
     let g:clang_format#style_options = {
         \ "BasedOnStyle" : "Google",
@@ -81,11 +88,9 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Chiel92/vim-autoformat'
-on_ft = ['rust']
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
 hook_add = '''
-    let g:formatdef_rustfmt = '"rustfmt"'
-    let g:formatters_rust = ['rustfmt']
-    au BufWrite *.rs :Autoformat
+let g:rustfmt_autosave = 1
 '''
 

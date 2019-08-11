@@ -11,9 +11,9 @@ mkdir ~/.config/nvim/ftplugin
 mkdir ~/github
 cd ~/github
 git clone https://github.com/kamino410/dotfiles.git
-cp ./dotfiles/minimal_nvim/init.vim ~/.config/nvim
-cp ./dotfiles/minimal_nvim/plugins.toml ~/.config/dein
-cp ./dotfiles/minimal_nvim/cpp.vim ~/.config/nvim/ftplugin
+cp ./dotfiles/.config/nvim/init.vim ~/.config/nvim
+cp ./dotfiles/.config/nvim/ftplugin/cpp.vim ~/.config/nvim/ftplugin
+cp ./dotfiles/.config/dein/plugins.toml ~/.config/dein
 cd ~
 echo EOF
 alias nvrr='nvr --remote-tab'
