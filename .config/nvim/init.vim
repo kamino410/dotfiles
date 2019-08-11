@@ -1,4 +1,4 @@
-let g:python3_host_prog = 'python3'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " dein --------------------
 let g:cache_home = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
@@ -70,3 +70,17 @@ syntax on
 let $GIT_EDITOR = 'nvr -cc split --remote-wait'
 autocmd FileType gitcommit set bufhidden=delete
 
+" rust --------------------
+"function! s:rust_format()
+"    let now_line = line(".")
+"    exec ":%! cargo fmt"
+"    exec ":" . now_line
+"endfunction
+"
+"if executable('cargo')
+"    augroup rust_format
+"        autocmd!
+"        autocmd BufWrite,FileWritePre,FileAppendPre *.rs call s:rust_format()
+"    augroup END
+"endif
+"
