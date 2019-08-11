@@ -14,6 +14,7 @@ git clone https://github.com/kamino410/dotfiles.git
 cp ./dotfiles/.config/nvim/init.vim ~/.config/nvim
 cp ./dotfiles/.config/nvim/ftplugin/cpp.vim ~/.config/nvim/ftplugin
 cp ./dotfiles/.config/dein/plugins.toml ~/.config/dein
+cp ./dotfiles/.config/dein/plugins_lazy.toml ~/.config/dein
 cd ~
 cat <<EOF >> ~/.bashrc
 export LC_ALL=en_US.UTF-8
