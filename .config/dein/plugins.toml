@@ -23,7 +23,7 @@ hook_add = '''
 [[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'
 hook_add = '''
-    nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
+    nnoremap <silent><C-K><C-S> :NERDTreeTabsToggle<CR>
     let g:nerdtree_tabs_meaningful_tab_names = 1
 '''
 
