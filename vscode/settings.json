@@ -9,10 +9,18 @@
     "workbench.list.keyboardNavigation": "simple",
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
+    "macros": {
+        "selectAndToggleSidebar": [
+            "list.select",
+            "workbench.action.toggleSidebarVisibility"
+        ]
+    },
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.foldfix": true,
     "vim.useCtrlKeys": true,
+    "vim.leader": "<space>",
+    "vim.use<C-l>": false,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -57,7 +65,6 @@
             ]
         }
     ],
-    "vim.leader": "<space>",
     "C_Cpp.clang_format_style": "{ BasedOnStyle : Google, AccessModifierOffset : -2, IndentWidth : 2, TabWidth : 2, UseTab : Never, Standard : C++11, ColumnLimit : 100, AllowShortBlocksOnASingleLine : true, AllowShortIfStatementsOnASingleLine : true, AllowShortCaseLabelsOnASingleLine : true}",
     "[cpp]": {
         "editor.tabSize": 2
