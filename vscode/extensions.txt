@@ -1,0 +1,9 @@
+Vim
+C/C++
+vscode-cudacpp
+CMake
+CMake Tools
+Docker
+Remote SSH
+Remote Development
+

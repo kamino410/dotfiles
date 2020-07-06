@@ -1,0 +1,69 @@
+{
+    "editor.wordWrap": "on",
+    "editor.renderWhitespace": "all",
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.renderControlCharacters": true,
+    "editor.wordWrapColumn": 100,
+    "workbench.list.keyboardNavigation": "simple",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.foldfix": true,
+    "vim.useCtrlKeys": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "h"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "after": [
+                "."
+            ]
+        },
+        {
+            "before": [
+                "."
+            ],
+            "after": [
+                ";"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "C_Cpp.clang_format_style": "{ BasedOnStyle : Google, AccessModifierOffset : -2, IndentWidth : 2, TabWidth : 2, UseTab : Never, Standard : C++11, ColumnLimit : 100, AllowShortBlocksOnASingleLine : true, AllowShortIfStatementsOnASingleLine : true, AllowShortCaseLabelsOnASingleLine : true}",
+    "[cpp]": {
+        "editor.tabSize": 2
+    },
+    "[c]": {
+        "editor.tabSize": 2
+    }
+}
+
