@@ -1,8 +1,4 @@
 export LC_ALL=en_US.UTF-8
-
-autoload -U compinit
-compinit
-
 autoload -Uz colors
 colors
 
