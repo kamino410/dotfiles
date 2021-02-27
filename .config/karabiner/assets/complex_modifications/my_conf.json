@@ -2,7 +2,7 @@
     "title": "my config",
     "rules": [
         {
-            "description": "command単体:英かな, command->control, caps->command, control->caps(caps<->control in item2)",
+            "description": "command単体:英かな, caps<->control",
             "manipulators": [
                 {
                     "type": "basic",
@@ -24,17 +24,6 @@
                         {
                             "key_code": "japanese_eisuu"
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_if",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
-                        }
                     ]
                 },
                 {
@@ -56,17 +45,6 @@
                     "to_if_alone": [
                         {
                             "key_code": "japanese_kana"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_if",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
                         }
                     ]
                 },
@@ -85,17 +63,6 @@
                             "key_code": "left_control",
                             "lazy": true
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_if",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
-                        }
                     ]
                 },
                 {
@@ -112,139 +79,6 @@
                         {
                             "key_code": "caps_lock",
                             "lazy": true
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_if",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "left_command",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_control",
-                            "lazy": true
-                        }
-                    ],
-                    "to_if_alone": [
-                        {
-                            "key_code": "japanese_eisuu"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_unless",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "right_command",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_control",
-                            "lazy": true
-                        }
-                    ],
-                    "to_if_alone": [
-                        {
-                            "key_code": "japanese_kana"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_unless",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "caps_lock",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_command",
-                            "lazy": true
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_unless",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "left_control",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "caps_lock",
-                            "lazy": true
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_unless",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
                         }
                     ]
                 }
@@ -264,17 +98,6 @@
                         },
                         {
                             "key_code": "japanese_eisuu"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_if",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
                         }
                     ]
                 }
@@ -302,17 +125,6 @@
                         },
                         {
                             "key_code": "japanese_eisuu"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "frontmost_application_if",
-                            "bundle_identifiers": [
-                                "^com.googlecode.iterm2",
-                                "^com.microsoft.VSCode",
-                                "^com.microsoft.rdc.macos",
-                                "^io.alacritty"
-                            ]
                         }
                     ]
                 }
